@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="min-h-screen flex items-center dark:bg-gray-800 dark:text-gray-100 justify-center">
+        <div class="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-900 dark:text-gray-100">
+            <h1 class="text-2xl font-bold text-center">Sign In</h1>
+            <p class="text-sm dark:text-gray-400 text-center">Sign in to access your account</p>
+            <form novalidate="" action="dashboard.html" class="space-y-6" id="login-form">
+                <div class="space-y-1 text-sm">
+                    <label for="username" class="block dark:text-gray-400">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Username" class="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400">
+                </div>
+                <div class="space-y-1 text-sm">
+                    <label for="password" class="block dark:text-gray-400">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password" class="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400">
+                    <div class="flex justify-end text-xs dark:text-gray-400">
+                        <a rel="noopener noreferrer" href="#">Forgot Password?</a>
+                    </div>
+                </div>
+                <button  class="block w-full p-3 text-center rounded-sm dark:text-gray-900 dark:bg-violet-400">Sign in</button>
+            </form>
+            <div class="flex items-center pt-4 space-x-1">
+                <div class="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
+                <p class="px-3 text-sm dark:text-gray-400">With social accounts</p>
+                <div class="flex-1 h-px sm:w-16 dark.bg-gray-700"></div>
+            </div>
+            <div class="flex justify-center space-x-4">
+                <button aria-label="Log in with Google" class="p-3 rounded-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-5 h-5 fill-current">
+                        <!-- Google icon -->
+                    </svg>
+                </button>
+                <button aria-label="Log in with Twitter" class="p-3 rounded-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-5 h-5 fill-current">
+                        <!-- Twitter icon -->
+                    </svg>
+                </button>
+                <button aria-label="Log in with GitHub" class="p-3 rounded-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-5 h-5 fill-current">
+                        <!-- GitHub icon -->
+                    </svg>
+                </button>
+            </div>
+            <p class="text-xs text-center sm:px-6 dark:text-gray-400">Don't have an account?
+                <a rel="noopener noreferrer" href="signup.html" class="underline dark:text-gray-100">Sign up</a>
+            </p>
+        </div>
+    </div>
+    <footer class="px-4 py-8 dark:bg-gray-800 dark:text-gray-400">
+        <div class="container flex flex-wrap items-center justify-center mx-auto space-y-4 sm:justify-between sm:space-y-0">
+            <div class="flex flex-row pr-3 space-x-4 sm:space-x-8">
+                <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full dark:bg-violet-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="w-5 h-5 rounded-full dark:text-gray-900">
+                        <path d="M18.266 26.068l7.839-7.854 4.469 4.479c1.859 1.859 1.859 4.875 0 6.734l-1.104 1.104c-1.859 1.865-4.875 1.865-6.734 0zM30.563 2.531l-1.109-1.104c-1.859-1.859-4.875-1.859-6.734 0l-6.719 6.734-6.734-6.734c-1.859-1.859-4.875-1.859-6.734 0l-1.104 1.104c-1.859 1.859-1.859 4.875 0 6.734l6.734 6.734-6.734 6.734c-1.859 1.859-1.859 4.875 0 6.734l1.104 1.104c1.859 1.859 4.875 1.859 6.734 0l21.307-21.307c1.859-1.859 1.859-4.875 0-6.734z"></path>
+                    </svg>
+                </div>
+                <ul class="flex flex-wrap items-center space-x-4 sm:space-x-8">
+                    <li>
+                        <a rel="noopener noreferrer" href="#">Terms of Use</a>
+                    </li>
+                    <li>
+                        <a rel="noopener noreferrer" href="#">Privacy</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="flex flex-wrap pl-3 space-x-4 sm:space-x-8">
+                <li>
+                    <a rel="noopener noreferrer" href="#">Instagram</a>
+                </li>
+                <li>
+                    <a rel="noopener noreferrer" href="#">Facebook</a>
+                </li>
+                <li>
+                    <a rel="noopener noreferrer" href="#">Twitter</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="sign.js" type="module"></script>
+</body>
+</html>
