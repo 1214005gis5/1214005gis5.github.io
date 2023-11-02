@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export let URLGeoJson = "https://asia-southeast2-argon-fire-401902.cloudfunctions.net/fetchGeoJson";
 export let urlPostGCF = "https://asia-southeast2-argon-fire-401902.cloudfunctions.net/postGIS4";
 export let tableTag="tr";
@@ -14,21 +13,4 @@ Lat  : #LAT#<br>
 X   : #X#<br>
 Y   : #Y#<br>
 HDMS : #HDMS#<br>
-=======
-export let URLGeoJson = "https://asia-southeast2-argon-fire-401902.cloudfunctions.net/fetchGeoJson";
-export let urlPostGCF = "https://asia-southeast2-argon-fire-401902.cloudfunctions.net/postGIS4";
-export let tableTag="tr";
-export let tableRowClass="content is-small";
-export let tableTemplate=`
-<td>#NAME#</td>
-<td >#KORDINAT#</td>
-<td>#TYPE#</td>
-`
-export const clickpopup = `
-Long : #LONG#<br>
-Lat  : #LAT#<br>
-X   : #X#<br>
-Y   : #Y#<br>
-HDMS : #HDMS#<br>
->>>>>>> a08d6342e45f33b3c4e2eb8307b9af4b761a82a4
 `
