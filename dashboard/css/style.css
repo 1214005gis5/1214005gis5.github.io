@@ -57,6 +57,13 @@ body {
   content: "✖";
 }
 
+#dropdown{
+  max-width: 800px;
+width: 100%;
+margin: 20px auto;
+
+}
+
 /* Styling the info table */
 #info-table {
   max-width: 800px;
