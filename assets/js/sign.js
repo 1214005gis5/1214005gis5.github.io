@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const data = await response.json();
                 if (data.status === true) {
                     // Login successful
-                    window.location.href = "https://raffzhm.github.io/dashboard";
+                    window.location.href = "dashboard";
                 } else {
                     // Handle login failure here
                     message.textContent = "Login failed. Please check your credentials.";
