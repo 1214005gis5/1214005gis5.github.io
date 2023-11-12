@@ -9,7 +9,7 @@ import {getAllCoordinates} from './controller/cog.js';
 
 let cookie = getCookie("Login")
 if (cookie == ""){
-    window.location.href = "sign.html"
+    window.location.href = "signin.html"
 }
 
 onClick('popup-closer',onClosePopupClick);
