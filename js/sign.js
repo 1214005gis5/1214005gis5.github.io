@@ -3,7 +3,7 @@ import { PostLogin, ResponseLogin } from "../dashboard/js/controller/controller.
 import { token, UrlLogin } from '../dashboard/js/template/geocf.js';
 
 document.addEventListener("DOMContentLoaded", function() {
-  const form = document.getElementById("formlogin");
+  const form = document.getElementById("login-form");
   form.addEventListener("submit", function(event) {
     event.preventDefault();
     let data = PostLogin();
