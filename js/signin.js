@@ -10,13 +10,3 @@ document.addEventListener("DOMContentLoaded", function() {
     postWithToken(UrlLogin, 'Authorization', 'Bearer ' + token, data, ResponseLogin);
   });
 });
-
-document.addEventListener("DOMContentLoaded", function() {
-  const form = document.getElementById("signup-form");
-
-  form.addEventListener("submit", function(event) {
-      event.preventDefault();
-      let data = GetDataForm();
-      postWithBearer(UrlRegister, token, data, ResponsePost)
-  });
-});
