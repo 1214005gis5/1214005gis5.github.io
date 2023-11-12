@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const loginForm = document.getElementById("login-form");
-    const signupForm = document.getElementById("signup-form");
+    // const signupForm = document.getElementById("signup-form");
     const message = document.getElementById("message");
 
     loginForm.addEventListener("submit", async function (event) {
@@ -42,41 +42,41 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    signupForm.addEventListener("submit", async function (event) {
-        event.preventDefault();
+    // signupForm.addEventListener("submit", async function (event) {
+    //     event.preventDefault();
 
-        const signupUsername = document.getElementById("signup-username").value;
-        const signupPassword = document.getElementById("signup-password").value;
+    //     const signupUsername = document.getElementById("signup-username").value;
+    //     const signupPassword = document.getElementById("signup-password").value;
 
-        try {
-            // Send a POST request to your registration API
-            const response = await fetch("https://your-registration-api-url/register", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    username: signupUsername,
-                    password: signupPassword
-                })
-            });
+    //     try {
+    //         // Send a POST request to your registration API
+    //         const response = await fetch("https://your-registration-api-url/register", {
+    //             method: "POST",
+    //             headers: {
+    //                 "Content-Type": "application/json"
+    //             },
+    //             body: JSON.stringify({
+    //                 username: signupUsername,
+    //                 password: signupPassword
+    //             })
+    //         });
 
-            if (response.ok) {
-                const data = await response.json();
-                if (data.status === true) {
-                    message.textContent = "Account created successfully. You can now log in.";
-                    message.style.color = "green";
-                } else {
-                    message.textContent = "Failed to create an account. Please try again.";
-                    message.style.color = "red";
-                }
-            } else {
-                // Handle response error here
-                message.textContent = "Registration request failed. Please try again.";
-                message.style.color = "red";
-            }
-        } catch (error) {
-            console.error("Error:", error);
-        }
-    });
+    //         if (response.ok) {
+    //             const data = await response.json();
+    //             if (data.status === true) {
+    //                 message.textContent = "Account created successfully. You can now log in.";
+    //                 message.style.color = "green";
+    //             } else {
+    //                 message.textContent = "Failed to create an account. Please try again.";
+    //                 message.style.color = "red";
+    //             }
+    //         } else {
+    //             // Handle response error here
+    //             message.textContent = "Registration request failed. Please try again.";
+    //             message.style.color = "red";
+    //         }
+    //     } catch (error) {
+    //         console.error("Error:", error);
+    //     }
+    // });
 });
