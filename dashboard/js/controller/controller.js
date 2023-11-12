@@ -158,3 +158,50 @@ export function responseData(results){
     results.forEach(isiRowPolygon);
     results.forEach(isiRowPolyline);
 }
+
+export function ResponsePostLogin(response) {
+    if (response && response.token) {
+      console.log('Token User:', response.token);
+      setCookieWithExpireHour('Login', response.token, 3);
+      window.location.href = 'https://kimseokgis.advocata.me/';
+      alert("Selamat Datang")
+    } else {
+      alert('Login gagal. Silakan coba lagi.');
+    }
+  }
+
+  export function ResponseLogin(result) {
+    ResponsePostLogin(result)
+  }
+
+export function PostLogin() {
+    const username = getValue("username");
+    const password = getValue("password");
+  
+    const data = {
+      username: username,
+      password: password
+    };
+    return data;
+  }
+
+  export function GetDataForm(){
+    const username = getValue("username");
+    const password = getValue("password");
+    console.log(password)
+
+    const data = {
+        username: username,
+        password: password
+    };
+    return data
+}
+
+export function AlertPost(value){
+    alert(value.message + "\nRegistrasi Berhasil")
+    window.location.href= "login.html"
+}
+
+export function ResponsePost(result) {
+    AlertPost(result);
+}
