@@ -3,6 +3,19 @@ import {tableTemplate, tableRowClass, tableTag} from "../template/geocf.js";
 import {map} from '../config/peta.js';
 import Draw from 'https://cdn.skypack.dev/ol/interaction/Draw.js';
 
+export function getTokenFromAPI() {
+    const tokenUrl = "https://asia-southeast2-argon-fire-401902.cloudfunctions.net/loginGISChapter5";
+    fetch(tokenUrl)
+      .then(response => response.json())
+      .then(tokenData => {
+        if (tokenData.token) {
+          userToken = tokenData.token;
+          console.log('Token dari API:', userToken);
+        }
+      })
+      .catch(error => console.error('Gagal mengambil token:', error));
+  }
+
 export function isiRowPoint(value){
     if (value.geometry.type === "Point") {
     let content=tableTemplate.replace("#TYPE#",value.geometry.type).replace("#NAME#",value.properties.name).replace("#KORDINAT#",value.geometry.coordinates);
@@ -163,7 +176,7 @@ export function ResponsePostLogin(response) {
     if (response && response.token) {
       console.log('Token User:', response.token);
       setCookieWithExpireHour('Login', response.token, 3);
-      window.location.href = 'https://kimseokgis.advocata.me/';
+      window.location.href = 'https://1214005gis5.my.id/dashboard';
       alert("Selamat Datang")
     } else {
       alert('Login gagal. Silakan coba lagi.');
