@@ -1,4 +1,5 @@
-import {setInner,addChild } from "https://jscroot.github.io/element/croot.js";
+import {setInner,addChild, getValue } from "https://jscroot.github.io/element/croot.js";
+import { setCookieWithExpireHour } from 'https://jscroot.github.io/cookie/croot.js';
 import {tableTemplate, tableRowClass, tableTag} from "../template/geocf.js";
 import {map} from '../config/peta.js';
 import Draw from 'https://cdn.skypack.dev/ol/interaction/Draw.js';
