@@ -104,39 +104,7 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/ol@v8.1.0/dist/ol.js"></script>
         <script src="./js/script.js" type="module"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                // Event listener for the logout button
-                const logoutButton = document.getElementById("logout-button");
-                if (logoutButton) {
-                    logoutButton.addEventListener("click", function (event) {
-                        event.preventDefault();
-                        // Call your logout function here, e.g., deleteCookie()
-                        deleteCookie("Login");
-                        // Show a success message
-                        // showLogoutSuccessMessage();
-                        alert("Anda Berhasil Sign Out!");
-                        // Redirect or perform any other necessary actions
-                        window.location.href = '/';
-                    });
-                }
-            });
-        
-            // Function to delete a cookie
-            function deleteCookie(name) {
-                document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-            }
-        
-            // Function to show a logout success message
-            function showLogoutSuccessMessage() {
-                // You can customize this part to show the message in your preferred way
-                // alert("Anda Berhasil Sign Out!");
-                // Or create an HTML element dynamically to display the message
-                const messageElement = document.createElement('div');
-                messageElement.textContent = "Anda Berhasil Sign Out!";
-                document.body.appendChild(messageElement);
-            }
-        </script>
+        <script src="./js/signout.js" type="module"></script>
     </div>
 </body>
 
