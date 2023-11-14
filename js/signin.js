@@ -4,6 +4,7 @@ import { token, UrlLogin } from '../dashboard/js/template/geocf.js';
 
 document.addEventListener("DOMContentLoaded", function() {
   const form = document.getElementById("login-form");
+  console.log(form);
   form.addEventListener("submit", function(event) {
     event.preventDefault();
     let data = PostLogin();
