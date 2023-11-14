@@ -213,7 +213,7 @@ export function PostLogin() {
 
 export function AlertPost(value){
     alert(value.message + "\nRegistrasi Berhasil")
-    window.location.href= "login.html"
+    window.location.href= "signin.html"
 }
 
 export function ResponsePost(result) {
