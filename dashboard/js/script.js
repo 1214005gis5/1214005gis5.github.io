@@ -7,11 +7,11 @@ import {onClosePopupClick,onDeleteMarkerClick,onSubmitMarkerClick,onMapClick,onM
 import {onClick} from 'https://jscroot.github.io/element/croot.js';
 import {getAllCoordinates} from './controller/cog.js';
 
-let cookie = getCookie("Login")
-if (cookie == ""){
-    alert("Anda Belum Sign In Boss");
-    window.location.href = "https://1214005gis5.github.io/signin.html"
-}
+// let cookie = getCookie("Login")
+// if (cookie == ""){
+//     alert("Anda Belum Sign In Boss");
+//     window.location.href = "https://1214005gis5.github.io/signin.html"
+// }
 
 onClick('popup-closer',onClosePopupClick);
 onClick('insertmarkerbutton',onSubmitMarkerClick);
