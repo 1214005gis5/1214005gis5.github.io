@@ -19,9 +19,17 @@ onClick('hapusbutton',onDeleteMarkerClick);
 onClick('hitungcogbutton',getAllCoordinates);
 
 map.on('click', onMapClick);
+// map.on('click', onMapInput)
 map.on('pointermove', onMapPointerMove);
 map.on('movestart', disposePopover);
-    
+export let allCoordinates = []
+map.on('click', function (event) {
+    let lonLat = ol.proj.toLonLat(event.coordinate);
+    allCoordinates.push(lonLat);
+
+    console.log(lonLat)
+});
+
 get(URLGeoJson,data => {
     responseData(data)
     let link = MakeGeojsonFromAPI(data)
