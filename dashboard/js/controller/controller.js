@@ -27,23 +27,20 @@ export function isiRowPoint(value){
 
 export function isiRowPolygon(value){
     if (value.geometry.type === "Polygon") {
-        let coordinates = value.geometry.coordinates.map(coord => coord.join(', ')).join(' | ');
-        let content = tableTemplate.replace("#TYPE#", value.geometry.type)
-            .replace("#NAME#", value.properties.name)
-            .replace("#KORDINAT#", coordinates);
-        addChild("polygon", tableTag, tableRowClass, content);
+    let content=tableTemplate.replace("#TYPE#",value.geometry.type).replace("#NAME#",value.properties.name).replace("#KORDINAT#",value.geometry.coordinates);
+    // console.log(content);
+    addChild("polygon",tableTag,tableRowClass,content);
     }
 }
 
 export function isiRowPolyline(value){
     if (value.geometry.type === "LineString") {
-        let coordinates = value.geometry.coordinates.join(' | ');
-        let content = tableTemplate.replace("#TYPE#", value.geometry.type)
-            .replace("#NAME#", value.properties.name)
-            .replace("#KORDINAT#", coordinates);
-        addChild("line", tableTag, tableRowClass, content);
+    let content=tableTemplate.replace("#TYPE#",value.geometry.type).replace("#NAME#",value.properties.name).replace("#KORDINAT#",value.geometry.coordinates);
+    // console.log(content);
+    addChild("line",tableTag,tableRowClass,content);
     }
 }
+
 
 
 export function MakeGeojsonFromAPI(value) {
