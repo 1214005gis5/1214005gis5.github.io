@@ -64,10 +64,10 @@ margin: 20px auto;
 
 }
 
+
 /* Styling the info table */
 #info-table {
-  max-width: 800px;
-  width: 100%;
+  width: 80%;
   margin: 20px auto; /* Centering the table */
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -85,6 +85,7 @@ margin: 20px auto;
 }
 
 #info-table table {
+  table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
 }
@@ -100,6 +101,7 @@ margin: 20px auto;
 }
 
 #info-table td {
+  word-wrap: break-word;
   font-size: 16px;
 }
 
